@@ -1,0 +1,267 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+header h1 {
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+/* Filter section */
+.filters {
+  margin: 20px 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.filters input,
+.filters button {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 6px;
+}
+
+.filters input:focus,
+.filters button:hover {
+  background-color: #444;
+  outline: none;
+}
+
+/* Table styling */
+.table-container {
+  overflow-x: auto;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #000;
+  color: #fff;
+}
+
+thead th,
+tbody td {
+  padding: 12px;
+  border: 1px solid #444;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #1f1f1f;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #2a2a2a;
+}
+
+.main-content {
+  display: flex;
+  gap: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.content-area {
+  flex-grow: 1;
+  width: 100%;
+  padding-left: 20px; /* Tambahkan jarak dari sidebar */
+}
+
+
+.sidebar {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ini penting */
+  height: calc(70vh - 70px); /* Sesuaikan agar tidak melebihi viewport */
+  padding-bottom: 20px;
+}
+
+.sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-footer {
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+  padding: 10px 5px 0;
+}
+
+.sidebar-footer .heart {
+  color: crimson;
+  font-size: 14px;
+}
+
+
+.filter-btn {
+  padding: 10px;
+  background-color: #333;
+  border: none;
+  cursor: pointer;
+  color: #f0f0f0;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #555;
+}
+
+/* Konten utama */
+.content {
+  flex: 1;
+}
+
+.action-buttons button {
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.action-buttons button:hover {
+  background-color: #555;
+}
+
+/* Modal Container */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;  
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Grid layout dua kolom */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.modal-content h2 {
+  color: #000000;
+
+}
+
+.form-group input,
+.form-group select
+ {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #2e2e2e;
+  color: #000000;
+}
+
+/* Tombol submit */
+.submit-btn {
+  grid-column: span 2;
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #666;
+}
+
+/* Tombol close (X) */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
